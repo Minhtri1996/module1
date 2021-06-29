@@ -1,0 +1,51 @@
+<html>
+    <head><h1>RGB</h1></head>
+    <body>
+        <table>
+            <tr> <div  id = "color" style="width: 300px;height: 100px; background-color: rgb(90, 80, 70);" ></div> </tr>
+            <tr>
+                <td>RED</td>
+                <td>GREEN</td>
+                <td>BLUE</td>
+            </tr>
+            <tr>
+                <td>
+                    <input id="red" type="range"  onchange="do_something()" value="90"   min="0" max="255" >
+                    <p id="color-red"></p>
+                </td>
+                <td>
+                   <input id="green" type="range"  onchange="do_something()" value="80"  min="0" max="255">
+                   <p id="color-green"></p>
+                </td>
+                <td>
+                    <input id="blue" type="range"  onchange="do_something()" value="70"  min="0" max="255">
+                    <p id="color-blue"></p>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+           
+        </table>
+        <script>
+            function do_something() {
+
+                var red = document.getElementById("red").value;
+                var green=document.getElementById("green").value;
+                var blue=document.getElementById("blue").value;
+
+                document.getElementById('color-red').innerHTML = red;
+                document.getElementById('color-green').innerHTML = green;
+                document.getElementById('color-blue').innerHTML = blue;
+                // console.log(red);
+                let color = document.getElementById("color");
+                // console.log(red);
+                color.style.background = 'rgb('+red+', '+green+', '+blue+')';
+                color.innerHTML = 'rgb('+red+', '+green+', '+blue+')';
+
+            }
+        </script>
+    </body>
+</html>
