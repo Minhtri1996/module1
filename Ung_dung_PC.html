@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <head><h1>Tính toán máy tính </h1></head>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" id="mot" >
+                </td>
+                <td>
+                    <input type="text" id="hai">
+                </td>
+                <td></td>
+            </tr>
+            <tr> 
+                <td>
+                  <button onclick="do_cong()" type="button ">Addition(+)</button>
+                </td>
+                <td>
+                   <button onclick="do_tru()" type="button">Subtraction(-)</button>
+                </td>
+                <td>
+                    <button onclick="do_nhan()" type="button"> Multipcation(X)</button>
+                </td>
+                <td>
+                    <button onclick="do_chia()" type="button">Division(/)</button>
+                </td>
+            </tr>
+            <tr>
+                <td><p id ="demon" style="color: royalblue;"></p></td>
+            </tr>
+        </table>
+        <script>
+            function do_cong() {
+                let congA=document.getElementById('mot').value;
+                let congB=document.getElementById('hai').value;
+                let a=parseInt(congA)
+                let b=parseInt(congB)
+                let tong=a+b
+                console.log(tong);
+                document.getElementById("demon").innerHTML="Result Addition :"+ tong;
+            }
+            function do_tru() {
+                let truA=document.getElementById('mot').value;
+                let truB=document.getElementById('hai').value;
+                let c=parseInt(truA);
+                let d=parseInt(truB);
+                let hieu=c-d;
+                console.log(hieu);
+                document.getElementById("demon").innerHTML="Result Subtraction : " + hieu;
+            }
+            function do_nhan(params) {
+                let nhanA=document.getElementById('mot').value;
+                let nhanB=document.getElementById('hai').value;
+                let e=nhanA*nhanB;
+                console.log(e);
+                document.getElementById("demon").innerHTML="Result Multipcation: " + e;
+            }
+            function do_chia() {
+                let chiaA=document.getElementById('mot').value;
+                let chiaB=document.getElementById('hai').value;
+                let f=chiaA/chiaB;
+                console.log(f);
+                document.getElementById("demon").innerHTML="Result Division: " + f;
+            }
+        </script>
+
+    </body>
+</html>
