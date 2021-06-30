@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <form>
+            <img id="img" src="1.png" alt="">
+            <p>Click button below to move the image to right</p>
+            <input type="button" value="click me" onclick="chang()">
+        </form>
+        <script>
+           let jonj=null;
+           function init() {
+               jonj= document.getElementById("img")
+               jonj.style.position='relative';
+               jonj.style.left='0px'
+           }
+           function chang() {
+             jonj.style.left=parseInt(jonj.style.left) + 10 + 'px';
+           }
+           window.onload=init
+        </script>
+    </body>
+</html>
