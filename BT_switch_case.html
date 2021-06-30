@@ -1,0 +1,40 @@
+<html>
+    <head></head>
+    <body>
+        <table>
+            <h1>ỨNG DỤNG TÍNH SỐ NGÀY TRONG 1 THÁNG</h1>
+            <tr>
+                <th> 
+                    <input type="text" id="ungDung">
+                </th>
+                <th>
+                    <button onclick="do_something()" type="button">Tính số ngày</button>                
+                </th>
+            </tr>
+            <tr>
+                <td><p id ="demon" style="color: royalblue;"></p></td>
+            </tr>
+            <script>
+                function do_something() {
+                    let ungDung= document.getElementById("ungDung").value;
+                    switch (ungDung) {
+                        case '1':
+                        case '3':
+                        case '4':
+                        case '5':
+                            document.getElementById("demon").innerHTML="tháng " + ungDung +" có "+" 30 ngày"   
+                            break;
+                        case '2':
+                            document.getElementById("demon").innerHTML="tháng " + ungDung +" có "+" 28 hoặc 29 ngày"
+                            break;
+                        case '6':
+                        case '7':
+                        case '8':
+                            document.getElementById("demon").innerHTML="tháng " + ungDung +" có "+" 31 ngày"
+                            break;
+                    }
+                }
+            </script>
+        </table>
+    </body>
+</html>
