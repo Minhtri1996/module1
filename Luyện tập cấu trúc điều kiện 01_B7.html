@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        var sophut = parseInt(prompt(" số phút gọi :"))
+        var sotien 
+        const phicodinh=25000;
+        if (sophut>200) {
+            sotien=(sophut-200)*200+150*400+50*600 +phicodinh;
+        } else if (sophut>50) {
+            sotien=(sophut - 50) * 400 + 50 * 600+phicodinh;
+        } else {
+            sotien=sophut*600+phicodinh;
+        }
+        alert("số tiến phải trả : "+sotien+" vnd ")
+    </script>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        var bkt = parseInt(prompt (" Điểm bài kiểm tra :"));
+        var gk  = parseInt(prompt (" Điểm thi giữa kì"));
+        var ck  = parseInt(prompt (" Điểm thi cuối kì : "));
+        var dtb = (bkt+gk+ck)/3;
+        if (dtb<5) {
+            alert("Hạng F ")
+        } else if (dtb<7) {
+            alert("Hạng C")
+        } else if (dtb<9) {
+            alert ("Hạng B")
+        } else {
+            alert("Hạng A ")
+        }
+    </script>
+</html>
