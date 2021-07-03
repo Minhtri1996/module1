@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        var a= prompt("Nhập số nguyên tố đầu tiên : ");
+        var b=2;
+        var dem=0;
+        if (a<=0) {
+            alert (" Nhập lại số là số dương :")
+        } else {
+            while (dem<a) {
+               var kt=1;
+               for (var i=2;i<b-1;i++) {
+                    if (b%i==0) {
+                        kt=0;
+                        break
+                    }                    
+               }
+               if (kt==1) {
+                   dem++;
+                   alert("Số nguyên tố thứ "+kt+" là "+b)
+               }
+               b++
+            }
+        }        
+    </script>
+</html>
