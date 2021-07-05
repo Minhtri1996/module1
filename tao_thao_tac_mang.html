@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Sample Screen </h1>
+        <input type="text" id="name">
+        <input type="button" value="Add" onclick="do_something()" >
+        <input type="button" value="Dislay" onclick="on_something()">
+        <div id="out"></div>
+    </body>
+    <script>
+        let i=0;
+        let a=[];
+        function do_something() {
+            a[i]=document.getElementById("name").value;
+            alert("Element "+i+" add : "+a[i])
+            i++           
+        }
+        function on_something() {
+            let display = "";
+            for(i=0;i<a.length;i++) {
+                display += "<p>Element"+i+" = "+a[i]+"</p>"
+            }
+            console.log(display)
+            document.getElementById("out").innerHTML= display;
+        }
+    </script>
+</html>
