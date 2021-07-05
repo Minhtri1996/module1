@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        var a=[-3,5,1,3,2,10];
+        var dau=0;
+        var cuoi=a.length-1;
+        while (dau<cuoi) {
+            var b=a[dau]
+            a[dau]=a[cuoi];
+            a[cuoi]=b;
+            dau++;
+            cuoi--;
+        }
+        document.write(a)
+    </script>
+</html>
