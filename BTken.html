@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        let size =20;
+        let a=[];
+        let number=prompt("Nhập 1 số ")
+        for (i=0;i<size;i++) {
+            a[i]=Math.floor((Math.random()*16)+10)
+        }
+        let kt=false
+        
+        let s=0  
+        document.write(a)
+        let index=[]
+        let x=0;
+        for (j=0;j<a.length;j++) {
+            if (a[j]==number) {  
+               kt=true
+               index[x]=j;
+               s++;
+               x++;
+            }
+        }
+        kt ? document.write(" có ví trí "+index +' xuất hiện '+s) : document.write("không có ")
+    </script>
+</html>
