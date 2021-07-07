@@ -1,0 +1,41 @@
+<html>
+
+<head></head>
+
+<body>
+    <form action="">
+        <input type="text" id="vitri">
+        <input type="button" value="Hiển thị" onclick="do_something()">
+        <p id="name"></p>
+    </form>
+    <script>
+        function do_something() {
+            var number= document.getElementById("vitri").value;
+            number=parseInt(number);
+            var html=""
+            b=2
+            if (number <2) {
+                alert("yêu cầu nhập lại ")
+            } else {
+                
+                while (b<=number) {
+                   kt=true
+                   for (j=2;j<b-1;j++) {
+                       if (b%j==0) {
+                           kt=false
+                           break;
+                       }
+                   }
+                   if (kt==true) {
+                        html+=b+"<br>"
+                   }
+                   b++
+                }
+                document.getElementById("name").innerHTML=html
+            }
+        }
+       
+    </script>
+</body>
+
+</html>
