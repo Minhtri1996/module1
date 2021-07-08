@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="name">;
+        <input type="button" value="Dịch" onclick="do_something()">; 
+        <p id="tudien"></p>;
+    </body>
+    <script>
+        function do_something() {
+            var b= document.getElementById("name").value;
+            var EL=["dog","cat","tiger"]
+            var VN=["chó","mèo","hổ"]
+            kt=true
+            for(i=0;i<EL.length;i++) {
+                if (b==EL[i]) {
+                    document.getElementById("tudien").innerHTML=VN[i]
+                    kt=false
+                }
+            }
+            if (kt==true) {
+                alert("không có")
+            }
+        }
+    </script>
+</html>
