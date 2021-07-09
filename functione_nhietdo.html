@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <form action="">
+        <h1>temperature Converter</h1>
+        <p>Type a value in the Fa</p>
+        <p>
+            <label>Fahrenheit</label>
+            <input type="number" placeholder="Fahrenheit" onchange="temperatureConverter(this.value)">
+        </p>
+        <p>Celsius: <span id="outputCelsius"></span></p>
+    </form>
+    <script>
+        function temperatureConverter(valNum){
+            console.log(valNum);
+            // let valNum=document.getElementById("inputFahrenheit").value;
+            valNum=parseFloat(valNum)
+            return document.getElementById("outputCelsius").innerHTML=(valNum-32)/1.8;
+        }
+    </script>
+</body>
+</html>
