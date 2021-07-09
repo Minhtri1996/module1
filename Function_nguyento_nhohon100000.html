@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        function isPrime(number) {
+            dem=2
+            if (number<2) {
+               alert("yêu cầu nhập lại")
+            } else { 
+               while (dem<number) {
+                    kt=true
+                    for(let i=2;i<dem-1;i++) {
+                        if (dem%i==0) {
+                            kt=false
+                            break
+                        }
+                    }
+                    if (kt==true) {
+                      document.write("số nguyên tố " +dem+"<br>")
+                    }
+                    dem++
+                }
+            }
+           return dem
+        }
+        // let a=isPrime(1)
+        let b=isPrime(10000)
+    </script>
+</html>
