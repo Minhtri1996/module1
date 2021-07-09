@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>     
+    </body>
+    <script>
+        function nameStart(name) {
+            // let name=prompt("Tên nhân vật")
+            let name1=["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+            let star=["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+            let test=true
+            for(let i=0;i<name1.length;i++) {
+                if (name==name1[i]) {
+                    test=false
+                    document.write(star[i])
+                }
+            }
+            if (test==true) {
+               document.write("không có tên cần tìm ")      
+            }
+            return test 
+        }
+        let a=prompt("nhập tên cần tìm")
+        let c=nameStart(a);
+        
+    </script>
+</html>
