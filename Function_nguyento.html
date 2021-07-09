@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        function isPrime(number) {
+            let kt=true
+            if (number<2){
+                kt=false;
+            } else {
+                for(let i=2;i<number-1;i++) {
+                    if(number%i==0) {
+                        kt=false;
+                    }
+                }
+            }    
+            if(kt==true) {
+                alert("là số nguyên tố");
+            } else {
+                alert("không là số nguyên tố");
+            }          
+            return kt;
+        }
+        // let a=isPrime(13)
+        // alert(a)
+        let b=isPrime(21);
+    </script>
+</html>
