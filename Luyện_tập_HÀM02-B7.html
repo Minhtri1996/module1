@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+       function doiCho(number1,number2) {
+           let number=number1;
+           number1=number2;
+           number2=number;
+           return [number1,number2];
+       } 
+       let a=parseInt(prompt("Nhập 1 số :"));
+       let b=parseInt(prompt("Nhập 1 số :"));
+       document.write(a+","+b+"<br>");
+       document.write(doiCho(a,b));
+    </script>
+</html>

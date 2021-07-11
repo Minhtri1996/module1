@@ -1,0 +1,27 @@
+<html>
+
+<head></head>
+
+<body>
+
+</body>
+<html>
+<script>
+    function giaiThua(number) {
+        if (number == 0) {
+            return 1
+        } else {
+            let tich=1;
+            for (let i = 1; i <= number; i++) {
+                tich = tich*i;
+            }
+            return tich;  
+        }
+    }
+    let a=prompt("nhập 1 số");
+    document.write(a+"!="+giaiThua(a));
+</script>
+
+</html>
+
+</html>

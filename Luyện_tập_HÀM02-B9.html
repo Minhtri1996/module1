@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        function checkKt(arr,kitu) {
+            let dem=0
+            let check=true
+            for (let i=0;i<arr.length;i++) {
+                if (kitu==arr[i]) {
+                   dem++
+                   check=false              
+                }       
+            }
+            if (check==false ){
+                return dem ;
+            } else {
+                return -1;
+            }
+        }
+        let i=0
+        let mang=[]
+        do {
+            var a=prompt("Nhập 1 số :")
+            mang[i]=a;
+            i++
+        } while (a!="0")
+        document.write("["+mang+"]"+"<br>");
+        let b =prompt("Nhập 1 kí tự : ");
+        document.write("Số lần xuấ hiện kí tự " +b+" là "+checkKt(mang,b));
+    </script>
+</html>

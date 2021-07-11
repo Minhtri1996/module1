@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        function daoNguocMang(arr) {
+            let dau=0;
+            let cuoi=arr.length-1
+            while (dau<cuoi) {
+                let a=arr[dau]
+                arr[dau]=arr[cuoi];
+                arr[cuoi]=a;
+                dau++;
+                cuoi--;
+            }
+            return arr
+        }
+        let i=0;
+        let mang=[] ;
+        do {
+            var a=prompt("Nhập vào 1 số : ")
+            mang[i]=a;
+            i++
+        } while (a!="0");
+        document.write(mang +"<br>");
+        document.write(daoNguocMang(mang))     
+    </script>
+</html>
