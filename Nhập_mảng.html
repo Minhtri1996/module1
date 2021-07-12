@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        let a=parseInt(prompt("Nhập vào độ dài của mảng "));
+        let arr=[];
+        let sum=0;
+        let avg=0
+        for (let i=0;i<a;i++) {
+            arr[i]=parseInt(prompt("Nhập giá trị của mảng tại vị trí "+i));
+            sum=sum+arr[i];
+        }
+        avg=sum/(arr.length);
+        document.write(arr+"<br>"+avg);
+        
+    </script>
+</html>
