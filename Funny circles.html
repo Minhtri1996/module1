@@ -1,0 +1,40 @@
+<html>
+
+<head></head>
+
+<body>
+    <canvas id="name" height="1785" width="1000" style="border: 1px soild #d3d3d3"></canvas>
+    
+</body>
+<script>
+    function hinhTron(x,y,radius) {
+        this.x=x;
+        this.y=y;
+        this.radius=radius;
+    }
+    function createHinhTron () {
+        let circle=document.getElementById("name").getContext('2d');
+        let hinhtron=new hinhTron(500,500,80) ;
+        circle.beginPath();
+        circle.arc(hinhtron.x,hinhtron.y,hinhtron.radius,0,2*Math .PI);
+        circle.fill();
+    }
+    createHinhTron();
+    // function Circle(x, y, radius) {
+    //     this.x = x;
+    //     this.y = y;
+    //     this.radius = radius;
+    // }
+    // function createCircle() {
+    //     var ctx = document.getElementById("name").getContext("2d");
+    //     var circle = new Circle(500, 500, 80);
+    //     ctx.beginPath();
+        
+    //     ctx.arc(circle.x, circle.y, circle.radius, 0,2 * Math.PI);
+    //     ctx.fill();
+ 
+    // }
+    // createCircle();
+</script>
+
+</html>
