@@ -1,0 +1,42 @@
+<html>
+
+<head></head>
+
+<body>
+
+</body>
+<script>
+   let mydate= function(day,month,year) {
+       this.day=day;
+       this.month=day
+       this.year=year;
+       this.getDay=function() {
+           return this.day
+       }
+       this.getMonth=function() {
+           return this.month
+       }
+       this.getYear=function() {
+           return this.year
+       }
+       this.setDay=function(day) {
+           this.day=day
+       }
+       this.setMonth=function(month) {
+           this.month=month
+       }
+       this.setYear=function(year) {
+           this.year=year
+       }
+   }
+   let timedate= new mydate(2,2,2021);
+   let day=timedate.getDay();
+   let month=timedate.getMonth();
+   let year=timedate.getYear();
+   alert(day+'/'+month+'/'+year)
+   timedate.setDay(4);
+   timedate.setMonth(5);
+   timedate.setYear(2022);
+   alert(timedate.day+'/'+timedate.month+'/'+timedate.year);
+</script>
+</html>
