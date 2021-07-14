@@ -1,0 +1,109 @@
+<html>
+
+<head></head>
+
+<body>
+
+</body>
+<script>
+    function ketNoiMang(size, min, max) {
+        var arr = [];
+        for (var i = 0; i < size; i++) {
+            var arr1 = [];
+            for (var j = 0; j < size; j++) {
+                arr1[j] = Math.floor(Math.random() * (max - min + 1) + min);
+            }
+            arr[i] = arr1;
+        }
+        return arr;
+    }
+    do {
+        var number = parseInt(prompt("Nhập ma trận vuông có kích thước : "));
+        if (number <= 0) {
+            alert("nhập lại")
+        }
+    } while (number <= 0);
+    var min = parseInt(prompt("Nhập 1 số min :"));
+    var max = parseInt(prompt("Nhập 1 số max :"));
+    var array = ketNoiMang(number, min, max)
+    document.write(array);
+    document.write('<br>')
+    function tongChan(arr, n) {
+        let sum = 0
+        for (let i = 0; i < number; i++) {
+            for (let j = 0; j < number; j++) {
+                if (arr[i][j] % 2 == 0) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+    document.write("Tổng các phần tử chẵn là : " + tongChan(array, number));
+    document.write('<br>')
+    function tongCheoChinh(arr1, n1) {
+        let sum1 = 0
+        for (let i = 0; i < n1; i++) {
+            sum1 += arr1[i][i];
+        }
+        return sum1;
+    }
+    document.write("Tổng phần tử đường chéo chính : " + tongCheoChinh(array, number));
+    document.write('<br>');
+    function tongCheoPhu(arr2, n2) {
+        let sum2 = 0
+        for (let i = 0; i < n2; i++) {
+            sum2 += arr2[n2 - 1 - i][i];
+        }
+        return sum2;
+    }
+
+    document.write("Tổng phần tử đường chéo phụ : " + tongCheoPhu(array, number));
+    document.write("<br>");
+    function tongBien(arr3, n3) {
+        var sum3 = 0;
+        for (let i = 0; i < n3; i++) {
+            sum3 = sum3 + arr3[0][i] + arr3[n3 - 1][i];
+        }
+        for (let i = 1; i < n3 - 1; i++) {
+            sum3 = sum3 + arr3[i][0] + arr3[i][n3 - 1];
+        }
+        return sum3;
+    }
+    document.write('Tổng phần tử đường biên : ' + tongBien(array, number))
+    document.write('<br>');
+    function hienThiMaTran(arr4) {
+        for (let i = 0; i < arr4.length; i++) {
+            document.write(arr4[i] + '<br>');
+        }
+    }
+    hienThiMaTran(array);
+    document.write('<br>');
+    function hienThiTamGiacDuoi(arr5) {
+        var newarr = []
+        for (var i = 0; i < arr5.length; i++) {
+            var archid = []
+            for (var j = 0; j < i + 1; j++) {
+                archid.push(arr5[i][j]);
+            }
+            newarr[i] = archid
+            document.write(newarr[i] + '<br>');
+        }
+    }
+    hienThiTamGiacDuoi(array);
+    document.write('<br>');
+    function hienThiTamGiacTren(arr6) {
+        var a = [];
+        for (var i = 0; i < arr6.length; i++) {
+            var b = []
+            for (var j = arr6.length - 1; j > i - 1; i--) {
+                // b.push(arr6[i][j]); ????????????
+            }
+            a[i] = b;
+            document.write(a[i] + '<br>');
+        }
+    }
+    hienThiTamGiacTren(array);
+</script>
+
+</html>
