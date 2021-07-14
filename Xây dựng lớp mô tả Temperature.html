@@ -1,0 +1,21 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        var Temperature= function(c) {
+            this.c=c;
+            this.getF= function() {
+                return (9*c/5)+32 ;    
+            }
+            this.getK=function() {
+                return 273+c;
+            }
+        }
+        var crius=new Temperature(25);
+        var F=crius.getF();
+        var K=crius.getK();
+        alert("25 độ = "+F+','+K);
+    </script>
+</html>
