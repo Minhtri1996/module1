@@ -1,0 +1,46 @@
+
+<html >
+
+<head>
+
+</head>
+
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border:10px solid #1c03fd;"></canvas>
+</body>
+<script>
+    let Rectangle = function (chieudai, chieurong) {
+        this.chieudai = chieudai;
+        this.chieurong = chieurong;
+        this.getS = function () {
+            return chieudai * chieurong;
+        }
+        this.getC = function () {
+            return (chieudai + chieurong) * 2;
+        }
+        this.setDai = function (chieudai) {
+            this.chieudai = chieudai;
+        }
+        this.setRong = function (chieurong) {
+            this.chieurong = chieurong
+        }
+        this.getDisplay = function () {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0, 0, 150, 75);
+            ctx.font = ("20px Verdana");
+            ctx.fillText(" diện tích : " +s + "  chu vi: " + c, 200, 100);
+        }
+    }
+    let rectangle = new Rectangle(100,200);
+    let s = rectangle.getS();
+    let c = rectangle.getC();
+    document.write(s + "," + c);
+    rectangle.setDai(154);
+    rectangle.setRong(76);
+    alert(rectangle.chieudai + "," + rectangle.chieurong)
+    rectangle.getDisplay();
+</script>
+
+</html>
