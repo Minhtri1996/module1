@@ -1,0 +1,51 @@
+<html>
+    <head></head>
+    <body>
+        
+    </body>
+    <script>
+        function Mobile(trangthaipin,trangthaidienthoai,soanthao,hopthuden,guitinnhan) {
+            this.trangthaidienthoai=trangthaidienthoai;
+            this.trangthaipin=trangthaipin;
+            this.soanthao=soanthao;
+            this.hopthuden;
+            this.guitinnhan;
+            this.chucnangtrangthaipin=function {
+                return this.trangthaipin
+            }
+            this.chucnangsoanthao=function {
+                return this.soanthao;
+            }
+            this.chucnanghopthuden=function {
+                return this.guitinnhan;
+            }
+            this.chucnangguitinnhan=function {
+                return this.guitinnhan
+            }
+            this.chucnangtrangthaidienthoai=function {
+                return this.trangthaidienthoai
+            }
+            this.hienthitrangthaidienthoai=function {
+                if (trangthaidienthoai=='on') {
+                    return this.trangthaidienthoai=='off'
+                } else {
+                    return this.trangthaidienthoai=='on'
+                }
+            }
+            this.thaydoidienthoai=function () {
+                if (this.trangthaipin<20) {
+                    return this.trangthaidienthoai=='pin yếu'
+                    if (this.trangthaipin==0) {
+                       return this.trangthaidienthoai=='off'
+                    }
+                } 
+            }
+            this.chucnangnhantinnhan= function() {
+                return this.hopthuden
+            }
+            this.hienthitinnhan=function() {
+                return this.guitinnhan
+            }
+        }
+    </script>
+</html>
