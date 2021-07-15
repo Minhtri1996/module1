@@ -1,0 +1,38 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="game"></p>
+</body>
+<script>
+    let Fish = function (img, top, left, size) {
+        this.img = img;
+        this.top = top;
+        this.left = left;
+        this.size = size;
+        this.getchangimg = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.img + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+        this.moverRight=function () {
+            this.left+=20;
+            console.log(this.left)
+        }
+    }
+    let fish= new Fish('images.png',20,30,200)
+    function star() {
+        if (fish.left<window.innerWidth-fish.size) {
+            fish.moverRight();
+        }
+        document.getElementById('game').innerHTML=fish.getchangimg();
+        setTimeout(star,1000);
+    }
+    star();
+</script>
+
+</html>
